@@ -1,33 +1,69 @@
+/* ===== Whole App Background (Great Hall vibes) ===== */
 .stApp{
-    background : linear-gradient(135deg,#1e3a8a 0%,#fbbf24 100%);
-    
+    background: radial-gradient(circle at top, #1b1b2f 0%, #0f0f1a 60%);
     min-height:100vh;
-    font-family:'Segoe UI',sans-serif;
+    font-family: 'Georgia', serif;
+    color:#f5f5dc;
 }
+
+/* ===== Cards (Ancient parchment style) ===== */
 .card{
-    background-color: #fef3c7;
+    background: #f8f1d4;
     padding:25px;
-    border-radius:16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    margin-bottom: 25px;
-    color:#dc2626
-}
-h1,h2,h3{
-    color:#fbbf24;
-}
-
-div[data-testid="metric-container"]{
-    background-color:#16a34a;
     border-radius:14px;
-    padding:15px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.05);
-
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    margin-bottom:25px;
+    color:#3b2f2f;
+    border: 2px solid #d4af37;
 }
-.prediction-box{
-    background: linear-gradient(135deg,#7c3aed,#f59e0b);
 
-    padding:20px;
+/* ===== Headings (Golden magical text) ===== */
+h1,h2,h3{
+    color:#d4af37;
+    text-shadow: 0 0 8px rgba(212,175,55,0.6);
+    font-weight:bold;
+}
+
+/* ===== Metric Containers (House points board) ===== */
+div[data-testid="metric-container"]{
+    background: linear-gradient(135deg,#3b2f2f,#1e1e2f);
+    border-radius:12px;
+    padding:15px;
+    border:1px solid #d4af37;
+    color:#f5f5dc;
+    box-shadow:0 0 12px rgba(212,175,55,0.3);
+}
+
+/* ===== Prediction Box (Spell result glow) ===== */
+.prediction-box{
+    background: linear-gradient(135deg,#4b2e83,#2c003e);
+    padding:22px;
     border-radius:16px;
     text-align:center;
-    font-size:16px;
+    font-size:18px;
+    color:#ffd700;
+    font-weight:bold;
+    box-shadow:0 0 18px rgba(255,215,0,0.5);
+}
+
+/* ===== Buttons (Magic spell buttons) ===== */
+button[kind="primary"]{
+    background: linear-gradient(135deg,#740001,#ae0001) !important;
+    color:white !important;
+    border-radius:10px;
+    border:1px solid #d4af37 !important;
+    box-shadow:0 0 10px rgba(212,175,55,0.4);
+}
+
+/* Hover magic */
+button[kind="primary"]:hover{
+    transform:scale(1.05);
+    transition:0.2s ease-in-out;
+}
+
+/* ===== Smooth card hover levitation ===== */
+.card:hover{
+    transform:translateY(-6px);
+    transition:0.3s ease;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.5);
 }
